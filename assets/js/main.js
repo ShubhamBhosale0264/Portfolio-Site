@@ -27,7 +27,7 @@ function headerShadow() {
 
 /* ----- TYPING EFFECT ----- */
 var typingEffect = new Typed(".typedText", {
-  strings: ["Power BI Devloper","Data Analyst","Python Developer"],
+  strings: ["PowerBI Dev","Data Analyst","Python Dev"],
   loop: true,
   typeSpeed: 100,
   backSpeed: 80,
@@ -125,3 +125,19 @@ document.getElementById("contactForm").addEventListener("submit", async function
     alert("An error occurred while sending the email. Please try again.");
   }
 });
+// Dark mode
+function toggleMode() {
+  const body = document.body;
+  body.classList.toggle('dark-mode');
+  body.classList.toggle('light-mode');
+
+  // Store the mode in local storage
+  const mode = body.classList.contains('dark-mode') ? 'dark-mode' : 'light-mode';
+  localStorage.setItem('mode', mode);
+}
+
+// Load the mode from local storage on page load
+window.onload = function() {
+  const mode = localStorage.getItem('mode') || 'light-mode';
+  document.body.classList.add(mode);
+}
