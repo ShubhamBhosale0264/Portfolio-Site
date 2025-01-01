@@ -141,3 +141,9 @@ window.onload = function() {
   const mode = localStorage.getItem('mode') || 'light-mode';
   document.body.classList.add(mode);
 }
+// navbar
+function myMenuFunction() {
+  const menu = document.getElementById("myNavMenu");
+  menu.classList.toggle("show");
+}
+
