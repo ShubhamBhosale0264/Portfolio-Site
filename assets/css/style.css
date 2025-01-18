@@ -779,5 +779,117 @@ body.dark-mode .moon {
         cursor: pointer;
     }
 }
+/* Certificate */
+.gallery {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 10px; /* Add margin around the gallery */
+    gap: 10px; /* Space between items */
+}
+
+.gallery-item {
+    flex: 0 0 auto;
+    width: auto; /* Automatically calculate the width */
+    height: auto; /* Automatically calculate the height */
+    max-width: 7500px; /* Set the maximum width */
+    max-height: 500px; /* Set the maximum height */
+    transform: scale(0.5); /* Scale down the image to 50% size */
+    margin: 5px;
+    object-fit: contain; /* Ensure the image fits within the specified size */
+    cursor: pointer;
+}
+
+/* Optional: styling for the lightbox */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+}
+.gallery {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 10px; /* Add margin around the gallery */
+    gap: 10px; /* Space between items */
+}
+
+.certificate {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gallery-item {
+    flex: 0 0 auto;
+    max-width: 4500px; /* Set the maximum width */
+    max-height: 300px; /* Set the maximum height */
+    transform: scale(0.75); /* Scale down the image to 75% size */
+    margin: 5px;
+    object-fit: contain; /* Ensure the image fits within the specified size */
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+.certificate p {
+    margin-top: 5px;
+    text-align: center;
+    font-size: 14px; /* Adjust font size as needed */
+}
+
+/* Optional: styling for the lightbox */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+}
+/* For screens up to 768px wide */
+/* @media (max-width: 768px) {
+    .gallery {
+        display: none; /* Hide the gallery */
+    }
+    .mobile-message {
+        display: block; /* Show the mobile message */
+        font-size: 16px; /* Adjust font size for mobile */
+        text-align: center; /* Center-align the text */
+        margin: 20px;
+    }
+}
+
+/* For screens up to 480px wide */
+@media (max-width: 480px) {
+    .gallery {
+        display: none; /* Hide the gallery */
+    }
+    .mobile-message {
+        display: block; /* Show the mobile message */
+        font-size: 14px; /* Adjust font size for smaller mobile screens */
+        text-align: center; /* Center-align the text */
+        margin: 20px;
+    }
+} */
+
 
 

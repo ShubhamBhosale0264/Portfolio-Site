@@ -147,3 +147,17 @@ function myMenuFunction() {
   menu.classList.toggle("show");
 }
 
+// Certificate
+function openLightbox(element) {
+  var lightbox = document.createElement('div');
+  lightbox.classList.add('lightbox');
+  lightbox.onclick = function() {
+      lightbox.remove();
+  }
+
+  var img = document.createElement('img');
+  img.src = element.src;
+  lightbox.appendChild(img);
+
+  document.body.appendChild(lightbox);
+}
