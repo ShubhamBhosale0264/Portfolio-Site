@@ -98,33 +98,33 @@ function scrollActive() {
 window.addEventListener("scroll", scrollActive);
 
 /* ----- EMAIL FORM SUBMISSION ----- */
-document.getElementById("contactForm").addEventListener("submit", async function (event) {
-  event.preventDefault(); // Prevent default form submission
+// document.getElementById("contactForm").addEventListener("submit", async function (event) {
+//   event.preventDefault(); // Prevent default form submission
 
-  // Get form data
-  const name = document.getElementById("name").value;
-  const email = document.getElementById("email").value;
-  const message = document.getElementById("message").value;
+//   // Get form data
+//   const name = document.getElementById("name").value;
+//   const email = document.getElementById("email").value;
+//   const message = document.getElementById("message").value;
 
-  try {
-    // Send data to the server
-    const response = await fetch("/send-email", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ name, email, message }),
-    });
+//   try {
+//     // Send data to the server
+//     const response = await fetch("/send-email", {
+//       method: "POST",
+//       headers: { "Content-Type": "application/json" },
+//       body: JSON.stringify({ name, email, message }),
+//     });
 
-    // Check server response
-    if (response.ok) {
-      alert("Email sent successfully!");
-    } else {
-      alert("Failed to send email. Please try again later.");
-    }
-  } catch (error) {
-    console.error("Error:", error);
-    alert("An error occurred while sending the email. Please try again.");
-  }
-});
+//     // Check server response
+//     if (response.ok) {
+//       alert("Email sent successfully!");
+//     } else {
+//       alert("Failed to send email. Please try again later.");
+//     }
+//   } catch (error) {
+//     console.error("Error:", error);
+//     alert("An error occurred while sending the email. Please try again.");
+//   }
+// });
 // Dark mode
 function toggleMode() {
   const body = document.body;

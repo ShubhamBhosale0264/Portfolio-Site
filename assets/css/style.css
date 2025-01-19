@@ -389,7 +389,7 @@ h3{
     z-index: 2;
 }
 /* ----- CONTACT BOX ----- */
-.contact-info{
+ /* .contact-info{
     position: relative;
     display: flex;
     flex-direction: column;
@@ -427,50 +427,14 @@ h3{
     z-index: 2;
 }
 /* ----- CONTACT FORM ----- */
-.form-control{
+
+.form-control {
+    margin-top: 50px; /* Adjust the top margin as needed */
     display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 100%;
-}
-.form-inputs{
-    display: flex;
-    gap: 10px;
-    width: 100%;
-}
-.input-field{
-    width: 50%;
-    height: 55px;
-    background: transparent;
-    border: 2px solid #AAA;
-    border-radius: 10px;
-    padding-inline: 20px;
-    outline: none;
-}
-textarea{
-    width: 100%;
-    height: 250px;
-    background: transparent;
-    border: 2px solid #AAA;
-    border-radius: 10px;
-    padding: 15px 20px;
-    outline: none;
-    resize: none;
-}
-.form-button>.btn{
-    display: flex;
-    align-items: center;
     justify-content: center;
-    background: var(--second-color);
-    color: var(--color-white);
+    align-content: center;
 }
-.form-button>.btn:hover{
-    background: #00B5E7;
-}
-.form-button i{
-    font-size: 18px;
-    rotate: -45deg;
-}
+
 /* ----- FOOTER BOX ----- */
 footer{
     display: flex;
