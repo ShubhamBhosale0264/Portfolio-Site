@@ -27,7 +27,7 @@ function headerShadow() {
 
 /* ----- TYPING EFFECT ----- */
 var typingEffect = new Typed(".typedText", {
-  strings: ["PowerBI Dev.","Data Analyst","Python Dev.","Web Dev."],
+  strings: ["PowerBI Dev.","Data Analyst","MIS Executive"],
   loop: true,
   typeSpeed: 100,
   backSpeed: 80,
