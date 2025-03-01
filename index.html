@@ -56,9 +56,30 @@
             <!-- <div class="featured-text-card">
                 <span>Shubham Bhosale</span>
             </div> -->
-            <div class="featured-name">
-                <p>I'm Shubham <span class="typedText"></span></p>
-            </div>  
+            <style>
+                .colored-letter {
+                    font-size: 36px;
+                    font-weight: bold;
+                }
+            </style>
+            <p id="name"></p>
+            <script>
+                const text = "I'm Shubham";
+                const colors = ["#FF5733", "#33FF57", "#3357FF", "#F333FF", "#FFC300", "#33FFF5", "#FF5733"];
+
+                function getRandomColor() {
+                    return colors[Math.floor(Math.random() * colors.length)];
+                }
+
+                const nameContainer = document.getElementById("name");
+                for (let i = 0; i < text.length; i++) {
+                    const letterSpan = document.createElement("span");
+                    letterSpan.textContent = text[i];
+                    letterSpan.classList.add("colored-letter");
+                    letterSpan.style.color = getRandomColor();
+                    nameContainer.appendChild(letterSpan);
+                }
+            </script>
             <div class="featured-text-btn">
                 <a href="/assets/images/Resume.pdf" download="rel.pdf">
                     <button style="background-color: #4CAF50; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; transition-duration: 0.4s; cursor: pointer; border-radius: 45px;" 
