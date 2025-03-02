@@ -12,74 +12,96 @@
     <title>Portfolio</title>
 </head>
 <body>
-   <div class="container">
-    <!-- --------------- HEADER --------------- -->
-    <nav id="header">
-        <div class="nav-logo">
-            <p class="nav-name">S</p>
-            <span></span>
-        </div>
-        <div class="nav-menu-btn">
-            <i class="uil uil-bars" onclick="myMenuFunction()"></i>
-        </div>
-        <div class="nav-menu" id="myNavMenu">
-            <ul class="nav_menu_list">
-                <li class="nav_list">
-                    <a href="#home" class="nav-link active-link">Home</a>
+    <div class="container">
+        <!-- --------------- HEADER --------------- -->
+        <nav id="header">
+            <div class="nav-logo">
+                <p class="nav-name">S</p>
+                <span></span>
+            </div>
+            <div class="nav-menu-btn">
+                <i class="uil uil-bars" onclick="myMenuFunction()"></i>
+            </div>
+            <div class="nav-menu" id="myNavMenu">
+                <ul class="nav_menu_list">
+                    <li class="nav_list">
+                        <a href="#home" class="nav-link active-link">Home</a>
+                    </li>
+                    <li class="nav_list">
+                        <a href="#about" class="nav-link">About</a>
+                    </li>
+                    <li class="nav_list">
+                        <a href="#projects" class="nav-link">Projects</a>
+                    </li>
+                    <li class="nav_list">
+                        <a href="#contact" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+                <li>
+                    <div class="toggle-switch">
+                        <input type="checkbox" id="mode" class="switch" onclick="toggleMode()">
+                        <label for="mode" class="slider">
+                            <span class="icon moon">🌜</span>
+                            <span class="icon sun">🌞</span>
+                        </label>
+                    </div>
                 </li>
-                <li class="nav_list">
-                    <a href="#about" class="nav-link">About</a>
-                </li>
-                <li class="nav_list">
-                    <a href="#projects" class="nav-link">Projects</a>
-                </li>
-                <li class="nav_list">
-                    <a href="#contact" class="nav-link">Contact</a>
-                </li>
-            </ul>
-            <li>
-                <div class="toggle-switch"> 
-                    <input type="checkbox" id="mode" class="switch" onclick="toggleMode()"> 
-                    <label for="mode" class="slider"> 
-                        <span class="icon moon">🌜</span> 
-                        <span class="icon sun">🌞</span> 
-                    </label> 
-                </div>
-            </li>
-        </div>
-    </nav>    
-    <!-- -------------- MAIN ---------------- -->
-    <main class="wrapper">
-       <!-- -------------- FEATURED BOX ---------------- -->
-       <section class="featured-box" id="home">
-          <div class="featured-text">
-            <!-- <div class="featured-text-card">
-                <span>Shubham Bhosale</span>
-            </div> -->
-            <style>
-                .colored-letter {
-                    font-size: 36px;
-                    font-weight: bold;
-                }
-            </style>
-            <p id="name"></p>
-            <script>
-                const text = "I'm Shubham";
-                const colors = ["#FF5733", "#33FF57", "#3357FF", "#F333FF", "#FFC300", "#33FFF5", "#FF5733"];
+            </div>
+        </nav>
+        <!-- -------------- MAIN ---------------- -->
+        <main class="wrapper">
+            <!-- -------------- FEATURED BOX ---------------- -->
+            <section class="featured-box" id="home">
+                <div class="featured-text">
+                    <style>
+                        .colored-letter {
+                            font-size: 36px;
+                            font-weight: bold;
+                        }
+                        .typedText {
+                            font-size: 36px;
+                            font-weight: bold;
+                            display: inline;
+                        }
+                    </style>
+                    <div id="introduction">
+                        <p id="name" style="display: inline;"></p>
+                        <span class="typedText"></span>
+                    </div>
+                    <script>
+                        const text = "I'm Shubham - ";
+                        const colors = ["#FF5733", "#33FF57", "#3357FF", "#F333FF", "#FFC300", "#33FFF5", "#FF5733"];
 
-                function getRandomColor() {
-                    return colors[Math.floor(Math.random() * colors.length)];
-                }
+                        function getRandomColor() {
+                            return colors[Math.floor(Math.random() * colors.length)];
+                        }
 
-                const nameContainer = document.getElementById("name");
-                for (let i = 0; i < text.length; i++) {
-                    const letterSpan = document.createElement("span");
-                    letterSpan.textContent = text[i];
-                    letterSpan.classList.add("colored-letter");
-                    letterSpan.style.color = getRandomColor();
-                    nameContainer.appendChild(letterSpan);
-                }
-            </script>
+                        const nameContainer = document.getElementById("name");
+                        for (let i = 0; i < text.length; i++) {
+                            const letterSpan = document.createElement("span");
+                            letterSpan.textContent = text[i];
+                            letterSpan.classList.add("colored-letter");
+                            letterSpan.style.color = getRandomColor();
+                            nameContainer.appendChild(letterSpan);
+                        }
+
+                        // Check if Typed.js library is loaded
+                        if (typeof Typed !== 'undefined') {
+                            new Typed(".typedText", {
+                                strings: [
+                                    "PowerBI Developer",
+                                    "Data Analyst",
+                                    "MIS Executive"
+                                ],
+                                loop: true,
+                                typeSpeed: 100,
+                                backSpeed: 80,
+                                backDelay: 2000
+                            });
+                        } else {
+                            console.error("Typed.js library is not loaded.");
+                        }
+                    </script>
             <div class="featured-text-btn">
                 <a href="/assets/images/Resume.pdf" download="rel.pdf">
                     <button style="background-color: #4CAF50; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; transition-duration: 0.4s; cursor: pointer; border-radius: 45px;" 
