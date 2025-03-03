@@ -830,10 +830,10 @@ body.dark-mode .moon {
     max-height: 90%;
 }
 /* For screens up to 768px wide */
-/* @media (max-width: 768px) {
+@media (max-width: 768px) {
     .gallery {
         display: none; /* Hide the gallery */
-    }
+    /* }
     .mobile-message {
         display: block; /* Show the mobile message */
         font-size: 16px; /* Adjust font size for mobile */
@@ -853,4 +853,4 @@ body.dark-mode .moon {
         text-align: center; /* Center-align the text */
         margin: 20px;
     }
-} */
+}
