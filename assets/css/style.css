@@ -13,6 +13,10 @@
     --first-shadow-color: rgba(0, 0, 0, 0.1);
 }
 /* ----- BASE ----- */
+body, html {
+  overflow-x: hidden;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -102,6 +106,7 @@ nav{
 .nav-menu, .nav_menu_list{
     display: flex;
 }
+
 .nav-menu .nav_list{
     list-style: none;
     position: relative;
@@ -855,57 +860,56 @@ body.dark-mode .moon {
     }
 }
 /* Blog Section Styles */
-.blog-section {
-  padding: 40px 20px;
-  background-color: #f9f9f9;
-  text-align: center;
+#blog-section {
+    padding: 40px 10px;
+    background-color: black;
+    text-align: center;
 }
 
-.blog-section h2 {
-  font-size: 2rem;
-  margin-bottom: 30px;
-  color: #333;
+#blog-section h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: white;
+}
+
+#blog-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    align-items: start;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.blog-container iframe {
+    width: 100%;
+    border-radius: 25 px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease;
+    background: white;
+}
+
+.blog-container iframe:hover {
+    transform: scale(1.02);
+}
+.blog-container iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 480px; /* adjust based on the tallest post */
+    max-height: 480px;
+    aspect-ratio: 9 / 16;
+    border-radius: 8px;
+    overflow: hidden;
+    border: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background: white;
 }
 
 .blog-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 10px;
-}
-
-.blog-card {
-  background-color: #fff;
-  border-radius: 12px;
-  overflow: hidden;
-  text-decoration: none;
-  color: inherit;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.blog-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-}
-
-.blog-card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  display: block;
-}
-
-.blog-card h3 {
-  font-size: 1.2rem;
-  margin: 15px;
-  color: #222;
-}
-
-.blog-card p {
-  font-size: 0.95rem;
-  margin: 0 15px 20px;
-  color: #666;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 10px;
 }
