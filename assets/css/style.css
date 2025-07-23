@@ -74,15 +74,15 @@ body{
 }
 /* ----- NAVIGATION BAR ----- */
 nav{
-    margin-top: 10px;
-    margin-left:475px;
+    margin-top: 20px;
+    margin-left:120px;
     position:fixed;
     display:flex;
     justify-content: center;
-    width: fit-content;
+    /* width:auto; */
     height: 90px;
     line-height: 90px;
-    background: var(--body-color);
+    background-color: rgba(255, 255, 255, 0.8);
     padding-inline: 2vw;
     transition: .3s;
     z-index: 100;
@@ -110,6 +110,8 @@ nav{
 .nav-menu .nav_list{
     list-style: none;
     position: relative;
+    margin-right: 45px;
+    margin-top: 30px;
 }
 .nav-link{
     text-decoration: none;
@@ -277,6 +279,7 @@ nav{
 }
 /* -- ## --- RESUABLE CSS -- ## -- */
 .top-header{
+    align-content: center;
     text-align: center;
     margin-bottom: 5em;
 }
@@ -499,7 +502,7 @@ footer{
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background: rgba(255, 255, 255, 0.7);
+        background: rgba(255, 255, 255, 0.1);
         backdrop-filter: blur(20px);
         width: 100%;
         min-height: 450px;
@@ -592,13 +595,14 @@ body.dark-mode {
 }
 
 .toggle-switch {
-    position: fixed;
+    position: relative;
     top: 10px;
     right: 10px;
 }
 
 .switch {
     display: none;
+    position: relative;
 }
 
 .slider {
