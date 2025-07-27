@@ -291,6 +291,12 @@ nav{
 .top-header span{
     color: #999;
 }
+@media (max-width: 768px) {
+    .top-header {
+        display: none !important;
+    }
+}
+
 h3{
     font-size: 20px;
     font-weight: 600;
@@ -500,7 +506,7 @@ footer{
         top: 80px;
         left: -100%;
         flex-direction: column;
-        justify-content: center;
+        justify-content: left;
         align-items: center;
         background: rgba(255, 255, 255, 0.1);
         backdrop-filter: blur(20px);
